@@ -2,18 +2,26 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
-      <div>
-        <form>
-          <label htmlFor="firstNameInput">First Name</label>
-          <input type="text" id="firstNameInput"></input>
-          <label htmlFor="lastNameInput">Last Name</label>
-          <input type="text" id="lastNameInput"></input>
-          <label htmlFor="emailInput">Email Address</label>
-          <input type="text" id="emailInput"></input>
-          <label htmlFor="phoneInput">Phone Number</label>
-          <input type="text" id="phoneInput"></input>
-        </form>
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="sidebar-box">
+          <div class="sidebar-item selected-item">Home</div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-item">General Information</div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-item">Education</div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-item">Work Experience</div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-item">Skills</div>
+        </div>
+      </div>
+      <div class="content-container">
+        <h1>Lorem ipsum dolor sit amet.</h1>
       </div>
     </div>
   );
