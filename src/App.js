@@ -1,11 +1,15 @@
 import "./App.css";
 import React, { Component } from "react";
+import Home from "./components/Home";
+import General from "./components/General";
 
 class App extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      visible: "Home",
+    };
   }
 
   render() {
@@ -30,18 +34,8 @@ class App extends Component {
         </div>
 
         <div class="content-container">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-
-          <div>
-            <form onSubmit={this.onSubmitGeneral}>
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstNameInput"
-              />
-              <button type="submit">Submit</button>
-            </form>
-          </div>
+          <Home visible={this.state.visible} />
+          <General visible={this.state.visible} />
         </div>
       </div>
     );
