@@ -10,32 +10,40 @@ class App extends Component {
     this.state = {
       visible: "Home",
     };
+
+    this.switchScreen = this.switchScreen.bind(this);
+  }
+
+  switchScreen(screen) {
+    this.setState({
+      visible: screen
+    })
   }
 
   render() {
     return (
-      <div class="main-container">
-        <div class="sidebar">
-          <div class="sidebar-box">
-            <div class="sidebar-item selected-item">Home</div>
+      <div className="main-container">
+        <div className="sidebar">
+          <div className="sidebar-box">
+            <div className="sidebar-item selected-item">Home</div>
           </div>
-          <div class="sidebar-box">
-            <div class="sidebar-item">General Information</div>
+          <div className="sidebar-box">
+            <div className="sidebar-item">General Information</div>
           </div>
-          <div class="sidebar-box">
-            <div class="sidebar-item">Education</div>
+          <div className="sidebar-box">
+            <div className="sidebar-item">Education</div>
           </div>
-          <div class="sidebar-box">
-            <div class="sidebar-item">Work Experience</div>
+          <div className="sidebar-box">
+            <div className="sidebar-item">Work Experience</div>
           </div>
-          <div class="sidebar-box">
-            <div class="sidebar-item">Skills</div>
+          <div className="sidebar-box">
+            <div className="sidebar-item">Skills</div>
           </div>
         </div>
 
-        <div class="content-container">
-          <Home visible={this.state.visible} />
-          <General visible={this.state.visible} />
+        <div className="content-container">
+          <Home visible={this.state.visible} onSwitch={this.switchScreen}/>
+          <General visible={this.state.visible} onSwitch={this.switchScreen}/>
         </div>
       </div>
     );
