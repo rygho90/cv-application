@@ -9,6 +9,10 @@ class App extends Component {
 
     this.state = {
       visible: "Home",
+      fname: 'Ryan',
+      lname: '',
+      phone: '',
+      email: ''
     };
 
     this.switchScreen = this.switchScreen.bind(this);
@@ -42,8 +46,8 @@ class App extends Component {
         </div>
 
         <div className="content-container">
-          <Home visible={this.state.visible} onSwitch={this.switchScreen}/>
-          <General visible={this.state.visible} onSwitch={this.switchScreen}/>
+          <Home visible={this.state.visible} onSwitch={this.switchScreen} />
+          <General visible={this.state.visible} onSwitch={this.switchScreen} fname={this.state.fname}/>
         </div>
       </div>
     );
