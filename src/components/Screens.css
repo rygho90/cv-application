@@ -1,0 +1,25 @@
+.screen-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.screen-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.general-form {
+    border: solid 1px black;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.button-row {
+    justify-self: flex-end;
+}
